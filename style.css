@@ -1,0 +1,422 @@
+body {
+  font: normal 18px 'Open Sans', sans-serif;
+  background: #130f0f;
+  color: #333;
+  background-color: #080808;
+transition: all 0.5s;
+
+}
+body.lightMode {
+  background-color: #E9E9E9;
+}
+.switchWrap {
+  width: 80px;
+  height: 50px;
+  background-color: #262626;
+  border: 3px solid #494949;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-left: 48%;
+  margin-top: 40px;
+}
+.switchWrap.lightMode {
+  background-color: #E9E9E9;
+  border-color: #ebebeb;
+}
+.switchBtn {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform .5s;
+}
+.switchBtn:focus {
+  outline: none;
+}
+.switchBtn.lightMode {
+  transform: translateX(30px) rotate(180deg);
+}
+.switchBtn svg {
+  width: 50px;
+  height: 50px;
+}
+.credit {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+}
+
+/*------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+
+main {
+    min-height:auto;
+}
+
+header {
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(238, 106, 106, 0.1);
+}
+    h1{
+        font: normal 4em 'Playfair Display SC', serif;
+        text-align:center;
+        margin-top: 0px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        nav a {
+            flex-grow: 1;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+        }
+
+      
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right:0;
+            height: 2px;
+            transform: scaleX(0);
+            background: rgb(185, 28, 28);
+            transition: 0.7s transform cubic-bezier(0.06, 0.9, 0.28, 1);
+        }
+
+        nav a:hover::after{
+            transform: scaleX(1)
+        }
+
+        /*------------------------------------------------------------------------------------*/
+
+
+.col-text {
+  height:20em;
+}
+.grid-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  flex-direction: row; 
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  margin: 200px 200px 350px 200px;
+}
+
+.grid-flex1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  flex-direction: row; 
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  margin: 100px 200px 0px 200px;
+}
+
+.grid-flex2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  flex-direction: row; 
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  margin: 250px 200px 200px 200px;
+}
+
+.grid-flex3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  flex-direction: row; 
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  margin: 350px 200px 0px 200px;
+}
+
+.col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.col-left {
+  -webkit-box-ordinal-group:-1;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+.col-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aligner-item {
+  width: 60%;
+}
+.col-image {
+  background-size: cover;
+  background-position:center center;
+}
+
+@media (max-width: 640px) {
+  .grid-flex {
+    height: 40em;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column; 
+    margin: 60px;
+   }
+   .grid-flex1 {
+    height: 40em;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column; 
+    margin: 60px;
+   }
+   .grid-flex2 {
+    height: 40em;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column; 
+    margin: 60px;
+   }
+   .grid-flex3 {
+    height: 40em;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column; 
+    margin: 60px;
+   }
+  .col {
+    order:vertical;
+  }
+  .col-left {
+    -webkit-box-ordinal-group:0;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+  }
+  .col-text div p {
+    padding: 1em;
+  }
+  .Aligner-item {
+    width: 90%;
+  }
+}
+
+        /*------------------------------------------------------------------------------------*/
+ /* Style the buttons that are used to open and close the accordion panel */
+ .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 10px 15px 0px 15px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 0px 0px 6px 6px;
+}
+        /*------------------------------------------------------------------------------------*/
+
+
+      
+
+.invert_color {
+        
+        mix-blend-mode: difference;
+        color: white;
+        z-index: 3;
+    }
+
+    .img1 {
+      position: absolute;
+      left: 1%;
+      top: 50%;
+      z-index: -1;
+    }
+
+    .img2 {
+      position: absolute;
+      left: 40%;
+      top: 50%;
+      z-index: -1;
+      width: 80%;
+    }
+
+    .img3 {
+      position: absolute;
+      left: 4%;
+      top: 32%;
+      z-index: -1;
+      width: 30%;
+    }
+
+  /*------------------------------------------------------------------------------------*/
+
+
+    .footer #button{
+      width:35px;
+      height:35px;
+      border: #727172 12px solid;
+      border-radius:35px;
+      margin:0 auto;
+      position:relative;
+      -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    .footer #button:hover{
+      width:35px;
+      height:35px;
+      border: #3A3A3A 12px solid;
+      -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+      position:relative;
+    }
+    .footer {
+      bottom:0;
+      left:0;
+      position:fixed;
+        width: 100%;
+        height: 2em;
+        overflow:hidden;
+        margin:0 auto;
+      -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+      z-index:999;
+    }
+    .footer:hover {
+      -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+      height: 10em;
+    }
+    .footer #container{
+      margin-top:5px;
+      width:100%;
+    height:100%;
+      position:relative;
+      top:0;
+      left:0;
+      background: #3A3A3A;
+    }
+    .footer #cont{
+      position:relative;
+      top:-45px;
+      right:190px;
+      width:150px;
+      height:auto;
+      margin:0 auto;
+    }
+    .footer_center{
+      width:500px;
+      float:left;
+      text-align:center;
+    }
+    .footer p{
+      font-family: 'Helvetica';
+      font-size: 20px;
+      font-weight: 100;
+      margin-top:70px;
+      margin-left:40px;
+    }
+
+    .whitetext {
+      color:white;
+      margin: 0px;
+      padding:0px;
+    }
+    .whitelogo {
+      color:white;
+      font-size:2em;
+    }
+    .whitelogo:hover {
+      color:lightgray;
+    }
